@@ -4,6 +4,8 @@ export const Game = {
       player: {
         name: "Renya Gouto"
       }, //your player
+      timeLeft: 3,
+      distanceLeft: 100
     }
   ), //end setup
 

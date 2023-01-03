@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
-import Hero from './Hero';
+// import Hero from './Hero';
+import BoardGame from './BoardGame'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Hero />
+    <BoardGame />
   </React.StrictMode>
 );
 
