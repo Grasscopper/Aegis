@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import BoardGame from './BoardGame'
 
 const Hero = (props) => {
   const [hero, setHero] = useState({
-    name: '',
-    health: 0
+    name: 'Hero',
+    health: 50
   })
 
   useEffect(() => {
@@ -20,10 +21,23 @@ const Hero = (props) => {
   }, [])
 
   return (
-    <div>
-      <h1>Name: {hero.name}</h1>
-      <p>Health: {hero.health}</p>
-    </div>
+    <section className="hero is-primary">
+      <div className="hero-body">
+          <p className="title">
+            {hero.name}
+          </p>
+
+          <p className="subtitle">
+            {hero.health} HP
+          </p>
+      </div>
+
+      <div className="container">
+          <div className="notification is-primary">
+            <BoardGame />
+          </div>
+      </div>
+    </section>
   )
 }
 
