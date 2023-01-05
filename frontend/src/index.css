@@ -1,7 +1,23 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 .character {
-  border: solid;
+  text-align: center;
+}
+
+.kaede {
+  background-color: #C2A9B5;
+}
+
+.gym {
+  background-color: #DDD8B8;
+}
+
+.diningHall {
+  background-color: #B3CBB9;
+}
+
+.library {
+  background-color: #84A9C0;
 }
 
 body {

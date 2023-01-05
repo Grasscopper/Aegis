@@ -1,73 +1,50 @@
 import React from 'react'
 
-import Carlos from './Images/Carlos.jpg'
-import Akane from './Images/Akane.jpg'
-import Junpei from './Images/Junpei.jpg'
+// import Carlos from './Images/Carlos.jpg'
+// import Akane from './Images/Akane.jpg'
+// import Junpei from './Images/Junpei.jpg'
+//
+// import Q from './Images/Q.jpg'
+// import Eric from './Images/Eric.jpg'
+// import Mira from './Images/Mira.jpg'
+//
+// import Diana from './Images/Diana.jpg'
+// import Phi from './Images/Phi.jpg'
+// import Sigma from './Images/Sigma.jpg'
 
-import Q from './Images/Q.jpg'
-import Eric from './Images/Eric.jpg'
-import Mira from './Images/Mira.jpg'
-
-import Diana from './Images/Diana.jpg'
-import Phi from './Images/Phi.jpg'
-import Sigma from './Images/Sigma.jpg'
+import Kaede from './Images/Kaede.jpg'
+import LocationTile from './LocationTile'
 
 const Board = (props) => {
+  let locations = props.G.locations.map((location) => {
+    return (
+      <LocationTile
+        key={location.id}
+        id={location.id}
+        name={location.name}
+        healthRisk={location.healthRisk}
+        deathGameRisk={location.deathGameRisk}
+      />
+    )
+  })
+
   return (
-    <>
+    <div>
       <section className="hero is-primary">
           <div className="hero-body">
-            <p className="title">Aegis</p>
+            <p className="title">Killing School Trip</p>
           </div>
       </section>
-      <div className="columns is-multiline" style={{ paddingLeft: 13, paddingRight: 13, margin: 0 }}>
-        <div className="column is-half">
-          <p className="title">Hours Remaining: {props.G.timeLeft}</p>
+      <div className="columns is-multiline" style={{ margin: 0 }}>
+        <div className="column character kaede is-3">
+          <p className="title has-text-white">{props.G.player.name}</p>
+          <progress className="progress is-success" value={props.G.player.health} max={props.G.player.maxHealth}>{props.G.player.health}</progress>
+          <img src={Kaede} />
         </div>
-        <div className="column is-half">
-          <p className="title">Distance to X-Door: {props.G.distanceLeft}</p>
-        </div>
+        {locations}
 
-        <div className="column character is-4">
-          <p className="title"> Carlos</p>
-          <img src={Carlos} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Akane</p>
-          <img src={Akane} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Junpei</p>
-          <img src={Junpei} />
-        </div>
-
-        <div className="column character is-4">
-          <p className="title"> Q</p>
-          <img src={Q} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Eric</p>
-          <img src={Eric} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Mira</p>
-          <img src={Mira} />
-        </div>
-
-        <div className="column character is-4">
-          <p className="title"> Diana</p>
-          <img src={Diana} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Phi</p>
-          <img src={Phi} />
-        </div>
-        <div className="column character is-4">
-          <p className="title"> Sigma</p>
-          <img src={Sigma} />
-        </div>
       </div>
-    </>
+    </div>
   )
 }
 
