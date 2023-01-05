@@ -2,5 +2,12 @@ Making a video game.
 --------------------------------
 
 AegisProject is the created Django project.
+Assuming there is a virtual environment in the parent 'Aegis' directory:
+cd AegisProject
+source ../venv/bin/activate
+python manage.py runserver
+
 
 frontend is the created React project.
+cd frontend
+npm run start

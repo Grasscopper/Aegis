@@ -2,10 +2,30 @@ export const Game = {
   setup: () => (
     {
       player: {
-        name: "Renya Gouto"
+        name: "Kaede Akamatsu",
+        health: 100,
+        maxHealth: 100
       }, //your player
-      timeLeft: 3,
-      distanceLeft: 100
+      locations: [
+        {
+          id: "gym",
+          name: "School Gym",
+          healthRisk: "High",
+          deathGameRisk: "Low"
+        },
+        {
+          id: "diningHall",
+          name: "School Dining Hall",
+          healthRisk: "Medium",
+          deathGameRisk: "Medium"
+        },
+        {
+          id: "library",
+          name: "School Library",
+          healthRisk: "Low",
+          deathGameRisk: "High"
+        }
+      ]
     }
   ), //end setup
 
