@@ -4,8 +4,13 @@ const LocationTile = (props) => {
   let column = "column character is-3 "
   column += props.id
 
+  const handleLocation = (event) => {
+    props.setSelectedLocation(props.name)
+    props.activateModal(event)
+  }
+
   return (
-    <div className={column}>
+    <div className={column} onClick={handleLocation}>
       <p className="title has-text-white">{props.name}</p>
 
       <p className="title has-text-black">HP Risk</p>
